@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create shortcut linux</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="panel-title">
+            Generate .desktop file
+        </div>
+        <div class="panel">
+            Name
+            <input type="text" name="" id="input-name" placeholder="Name of Application">
+            Exec
+            <input type="text" name="" id="input-exec" placeholder="/path/to/executable">
+            Icon
+            <input type="text" name="" id="input-icon" placeholder="/path/to/icon">
+            Comment
+            <input type="text" name="" id="input-comment" placeholder="Comment here">
+        </div>
+        <div class="output">
+            <h3><span class="span-brown">[Desktop Entry]</span></h3>
+            <h3><span class="span-green">Encoding</span>=<span class="span-pink">UTF-8</span></h3>
+            <h3><span class="span-green">Version</span>=1<span class="span-pink">.0</span></h3>
+            <h3><span class="span-green">Type</span>=Application</h3>
+            <h3><span class="span-green">Terminal</span>=<span class="span-pink">false</span></h3>
+            <h3><span class="span-green">Name</span>=<span id="span-name">Name of Application</span></h3>
+            <h3><span class="span-green">Exec</span>=<span id="span-exec">/path/to/executable</span></h3>
+            <h3><span class="span-green">Icon</span>=<span id="span-icon">/path/to/icon</span></h3>
+            <h3><span class="span-green">Comment</span>=<span id="span-coment">comment here</span></h3>
+        </div>
+        <button class="button-generate" id="button-generate">Generate</button>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+body{
+    background-color: rgb(242,241,240);
+}
+ 
+.container{
+    margin: auto;
+    width: 50%;
+}
+ 
+.panel{
+    background-color: rgb(243,120,76);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+ 
+.panel input{
+    display: block;
+    width: 98%;
+    margin-bottom: 5px;
+}
+ 
+.panel-title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    background-color: rgb(243,100,76);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+ 
+.output{
+    margin-top: 20px;
+}
+ 
+.output h3{
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+ 
+.button-generate{
+    border-radius: 0px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: rgb(247,246,246);
+    border: solid 1px rgb(243,120,76);
+    border-radius: 5px;
+}
+ 
+.span-green{
+    color: rgb(46,139,88);
+    font-weight: bold;
+}
+ 
+.span-pink{
+    color: rgb(247,62,255);
+}
+ 
+.span-brown{
+    color: rgb(165,42,42);
+    font-weight: bold;
+}
