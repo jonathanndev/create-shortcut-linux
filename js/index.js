@@ -40,43 +40,33 @@ panel.addEventListener('input', function(event){
 });
 
 buttonGenerate.addEventListener('click', function(){
-    var xmlHttp = GetXmlHttpObject();
-    if(xmlHttp == null){
-        console.log('error AJAX');
-        return;
-    } else{
-        var url = '';
-        xmlHttp.onreadystatechange = stateChanged();
-        xmlHttp.open('POST', url, true);
-        xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xmlHttp.send();
-    }    
-});
 
-function GetXmlHttpObject(){
-    var xmlHttp = null;
-    try {
-        // Firefox, Opera 8.0+, Safari
-        xmlHttp = new XMLHttpRequest();
-    } catch (e) {
-        // Internet Explorer
-        try {
-        xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
-        } catch (e) {
-        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    var inputName = document.querySelector('#input-name');
+    var inputExec = document.querySelector('#input-exec');
+    var inputIcon = document.querySelector('#input-icon');
+    var inputComment = document.querySelector('#input-comment');
+
+    var ajax = new XMLHttpRequest();
+
+    ajax.open('POST', 'http://localhost:3000/create-shortcut', true);
+    ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+    data = //create json 
+
+    ajax.send(data);
+
+    ajax.onreadystatechange = function() {
+    
+        if (ajax.readyState == 4 && ajax.status == 200) {
+        
+            var data = ajax.responseText;
+            
+            console.log(data);
         }
     }
-    return xmlHttp;
-}
+});
 
-function stateChanged() {
-    if (xmlHttp.readyState == 1 || xmlHttp.readyState == 2 || xmlHttp.readyState == 3){
-        console.log('loading...');
-    }
-    if (xmlHttp.readyState==4) {
-        console.log(responseText);
-    }
-}
+
 
 
 
